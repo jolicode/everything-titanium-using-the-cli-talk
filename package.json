@@ -1,0 +1,18 @@
+{
+  "name": "titanium-cli-talk-ticonf2014",
+  "description": "Slides of the TiConf Amsterdam 2014 about using CLI tools in the Titanium world",
+  "author": "Xavier Lacot",
+  "version": "1.0.0",
+  "main": "./index.js",
+  "preferGlobal": false,
+  "repository": "git://github.com/jolicode/eveything-titanium-using-the-cli-talk.git",
+  "homepage": "https://github.com/jolicode/eveything-titanium-using-the-cli-talk",
+  "keywords": ["titanium", "talk", "shwr", "term.js"],
+  "tags": ["titanium", "talk", "shwr", "term.js"],
+  "engines": { "node": ">= 0.8.0" },
+  "devDependencies": {
+    "express": "3.1.0",
+    "socket.io": "0.9.13",
+    "pty.js": "0.2.4"
+  }
+}

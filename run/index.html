@@ -1,0 +1,834 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Everything Titanium using the CLI</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+	<link rel="stylesheet" href="styles/prism.css" />
+	<link rel="stylesheet" href="styles/custom.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Everything Titanium using the <abbr title="Command Line Interface">CLI</abbr></h1>
+		<p>TiConf Amsterdam - Xavier Lacot - June 29th, 2014</p>
+	</header>
+
+	<section class="slide cover" id="coverpage"><div>
+		<div class="covertitle">
+			<h2>Everything Titanium using the <abbr title="Command Line Interface">CLI</abbr></h2>
+			<p>TiConf Amsterdam - <a href="http://lacot.org/">Xavier Lacot</a> - <span class="date">June 29th, 2014</span></p>
+		</div>
+		<img src="covers/title.jpg" alt="" />
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Hello, I am Xavier</h2>
+		<ul style="margin-bottom: 25px">
+			<li>Founder, Web- and Mobile- expert at <a href="http://jolicode.com">JoliCode</a></li>
+			<li>Contributor to <a href="http://github.com/xavierlacot">several Open Source projects</a></li>
+			<li>Titanium developer since 2009
+				<ul>
+					<li>Speaker at CodeStrong and TiConf<sdk/li>
+				</ul>
+			</li>
+			<li>Former President of the <a href="http://afup.org/">French Association of PHP Users</a></li>
+			<li>Co-organizer of the <a href="http://meetup.com/paris-titanium/">Titanium Paris</a> meetup group</li>
+		</ul>
+		<p><img src="pictures/twitter.png" style="width: 20px"> <a href="https://twitter.com/xavierlacot">@xavierlacot</a></p>
+		<p class="people with next">with <a href="https://twitter.com/TheBrousse" class="thebrousse">@TheBrousse</a></p>
+	</div></section>
+
+	<section class="slide cover"><div>
+		<img src="covers/jolicode.jpg" alt="" />
+	</div></section>
+
+	<section class="slide cover"><div>
+		<h2>A (brief) history as a Titanium developer...</h2>
+		<img src="covers/history.jpg" alt="" />
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>Titanium developer: 2009-2011</h2>
+		<img src="pictures/ti-developer.png" alt="" />
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>Titanium Studio: 2011-present</h2>
+		<img src="pictures/ti-studio.png" alt="" />
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>My experience aside Titanium</h2>
+		<ul style="margin-bottom: 25px">
+			<li>Symfony developer since a lot of years</li>
+			<li>nodejs developer more recently</li>
+			<li class="next">used to use Command Line Interfaces, aka. CLI</li>
+		</ul>
+		<img src="pictures/sf2-cli.png" alt="" class="next" />
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>The day when Titanium got his very own CLI</h2>
+		<img src="pictures/happy-cli.gif" alt="" style="width: 100%" />
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>CLI > GUI</h2>
+		<ul>
+			<li>a long debate...</li>
+			<li>
+				Pros:
+				<ul>
+					<li>higher productivity</li>
+					<li>automate/script tasks</li>
+					<li>use the convenient tools rather than a "all-in-one" solution</li>
+					<li>My <abbr title="Command Line Interface">CLI</abbr> is 1000% faster than your Eclipse crap (♥ Appcelerator)</li>
+					<li>feel like a hipster-hacker <em>when it works</em></li>
+				</ul>
+			</li>
+			<li>Cons: not polished and well packaged</li>
+		</ul>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<img src="pictures/gui-vs-cli.jpg" alt="" style="margin-top: 90px; width: 100%" />
+		<p class="half center">GUI</p>
+		<p class="half center">CLI</p>
+	</div></section>
+
+	<section class="slide cover"><div>
+		<h2>The Titanium CLI...</h2>
+		<img src="covers/ti-cli.jpg" alt="" />
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>Get / install the tool</h2>
+		<ul style="margin-bottom: 15px">
+			<li>
+				Installing the CLI is an easy task:
+				<pre><code class="language-javascript">$ npm install -g titanium</code></pre>
+			</li>
+			<li>
+				Want to live dangerously?
+				<pre><code class="language-javascript">$ npm install -g git://github.com/appcelerator/titanium.git</code></pre>
+			</li>
+		</ul>
+		<div class="next">
+			<img src="pictures/cli.png" alt="" />
+		</div>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>$ titanium sdk</h2>
+		<ul style="margin-bottom: 20px">
+			<li><code>$ ti sdk</code> helps manage the installed Titanium sdk:
+				<ul>
+					<li><code>list</code>: list installed sdks</li>
+					<li><code>install</code>: (un-)install a sdk version / update to newest</li>
+					<li><code>select</code>: select a specific version by default</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="term next" data-rows="16"></div>
+		<!-- <a href="#" data-role="term-command" data-command="ti sdk">test</a> -->
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>$ titanium config</h2>
+		<ul>
+			<li><code>ti config</code>: list all options</li>
+			<li><code>ti config user.email</code>: retrieves the value of a property</li>
+			<li><code>ti config user.email "hello@ticonf.org"</code>: sets property</li>
+		</ul>
+		<div class="next">
+			<h2>Some interesting configuration options</h2>
+			<ul>
+				<li><code>cli.completion</code>: enable cli tab-completion (working soon)</li>
+				<li><code>genymotion.enabled</code>: enabled to push directly to genymotion without manually calling "adb"</li>
+			</ul>
+		</div>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2 style="font-size: 150%">These settings are stored in ~/.titanium/config.json</h2>
+
+		<pre><code class="language-javascript">{
+	"user": {
+		"name": "Xavier Lacot",
+		"email": "xavier@lacot.org"
+	},
+	"app": {
+		"workspace": "/Users/xavier/Documents/workspace/titanium",
+		"idprefix": "com.jolicode",
+	},
+	[...],
+	"sdk": {
+		"selected": "3.2.3.GA"
+	},
+	"genymotion": {
+		"enabled": true
+	}
+}</code></pre>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>$ titanium create</h2>
+		<ul style="margin-bottom: 20px">
+			<li>A Swiss tool for creating projects!
+				<ul>
+					<li><em>interactive</em>: asks common questions (id, name, platforms, etc.)</li>
+					<li><em>fast</em>: create a project in 10 seconds!</li>
+					<li><em>lightweight</em>: it uses a simple two-tabs project template</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="term next" data-rows="16"></div>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<p style="text-align: center">
+			<img src="pictures/no-more-tistudio.png" style="width: 70%;" alt="" />
+		</p>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>Troubleshouting the configuration</h2>
+		<ul>
+			<li>
+				<code>$ ti setup check</code>: checks the configuration
+				<img src="pictures/setup-check.png" alt="" />
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>Troubleshouting the configuration</h2>
+		<ul>
+			<li><code>$ ti setup quick</code>: complete setup (developer name, sdk version, etc.)</li>
+			<li><code>$ ti setup app</code>: default app values (company app id prefix, publisher, website, etc.)</li>
+			<li>other commands: <code>user</code>, <code>network</code>, <code>cli</code>, <code>sdk</code>, <code>ios</code>, <code>android</code></li>
+		</ul>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>$ titanium build</h2>
+
+		<ul style="margin-bottom: 20px">
+			<li>all platforms are supported</li>
+			<li>simulators or real devices</li>
+			<li>even store-submission is possible!</li>
+		</ul>
+
+		<pre style="margin-bottom: 20px"><code class="language-javascript">$ ti build -p ios
+$ ti build -p android -T dist-playstore -K jolicode.keystore -L jolicode</code></pre>
+
+		<div class="term next" data-rows="12"></div>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>A lot of other commands...</h2>
+
+		<ul style="margin-bottom: 20px">
+			<li><code>$ ti status</code> displays the current login/user status</li>
+			<li><code>$ ti info</code> displays a complete diagnosis of the platform:
+				<ul>
+					<li>OS, JAVA, XCode</li>
+					<li>Titanium SDKs</li>
+					<li>Android SDK, Platforms and Emulators</li>
+					<li>Genymotion Emulators</li>
+					<li>iOS certificates and provisionnings, simulators, connected devices</li>
+					<li>etc.</li>
+				</ul>
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide cover"><div>
+		<h2>Extending the CLI</h2>
+		<img src="covers/extending-ti-cli.jpg" alt="" />
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>Built extensible through <em>plugins</em></h2>
+		<ul>
+			<li>add new commands</li>
+			<li>hook into exisiting commands</li>
+		</ul>
+		<p style="text-align: center">
+			<img src="pictures/transformers.gif" class="next" alt="" />
+		</p>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>Creating new commands</h2>
+		<ol>
+			<li>
+				a single js file, where you want
+				<code>/path/to/sthing/pony.js</code>
+			</li>
+			<li class="next">
+				register it for Titanium's cli:
+				<pre><code class="language-javascript">$ ti config -a paths.commands /path/to/sthing</code></pre>
+				(adds <code>/path/to/sthing</code> to the <code>paths.commands</code> config array)
+			</li>
+			<li class="next">
+				write the content of the command
+				<ul>
+					<li>a declarative part
+						<ul>
+							<li>command description, name, etc.</li>
+							<li>optionnaly, a <code>config()</code> method to set the default value of some execution option</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ol>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>Creating new commands</h2>
+		<ul>
+			<li>
+				the content of the command
+				<ul>
+					<li>a <code>validate()</code> method called to validate the options passed to the command</li>
+					<li>a <code>run()</code> method, the "body" of the command</li>
+				</ul>
+			</li>
+			<li class="next">the command name is the filename
+				<ul>
+					<li><code>pony</code> for <code>/path/to/sthing/pony.js</code></li>
+					<li>not possible to rename/alias it - ticket + <abbr title="pull request">PR</abbr> on their way :-)</li>
+					<li>
+						the latter loaded takes precedence<br />
+						<div style="text-align: center">the last <code>pony</code> command overrides an earlier <code>pony</code></div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>A sample custom command</h2>
+
+		<pre data-src="code/command-1.js" data-line="1-3"><code class="language-javascript"></code></pre>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>A sample custom command</h2>
+
+		<pre data-src="code/command-1.js" data-line="5-17"><code class="language-javascript"></code></pre>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>A sample custom command</h2>
+
+		<pre data-src="code/command-2.js" data-line="1-9"><code class="language-javascript"></code></pre>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>A sample custom command</h2>
+
+		<pre data-src="code/command-2.js" data-line="11-18"><code class="language-javascript"></code></pre>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>A sample custom command</h2>
+
+		<div class="term"></div>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>Hooking into commands: concept</h2>
+		<ul>
+			<li>idea: run operations when certain events occur</li>
+			<li><em>hooks</em> are a common concept, not specific to Titanium</li>
+			<li>can somehow be seen as "events" at the cli scale</li>
+		</ul>
+		<p style="text-align: center">
+			<img src="pictures/hooks.gif" style="width: 50%" alt="" />
+		</p>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>Hooking into commands: howto</h2>
+		<ol>
+			<li>
+				a single js file, where you want
+				<code>/path/to/sthing/soundAfterBuild.js</code>
+			</li>
+			<li class="next">
+				register it for Titanium's cli:
+				<pre><code class="language-javascript">$ ti config -a paths.hooks /path/to/sthing</code></pre>
+				(adds <code>/path/to/sthing</code> to the <code>paths.hooks</code> config array)
+			</li>
+			<li class="next">
+				write the content of the hook
+				<ul>
+					<li>using <code>cli.on()</code>, attach listeners to the occurence of hooks</li>
+					<li><code>cli.addHook()</code> is an alias for <code>cli.on()</code></li>
+				</ul>
+			</li>
+		</ol>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>A sample custom hook</h2>
+
+		<pre data-line="6"><code class="language-javascript">var path = require('path'),
+	play = require('play');
+
+exports.cliVersion = '>=3.2';
+exports.init = function(logger, config, cli, nodeappc) {
+    cli.on('build.post.compile', function(builder, next) {
+        play.sound(path.resolve(__dirname, 'sounds', 'trumpet.wav'));
+        next();
+    })
+};</code></pre>
+
+		<div class="term next" data-rows="10" style="margin-top: 10px"></div>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>Available hooks</h2>
+		<ul class="hooks-list left">
+			<li>build.pre.construct</li>
+			<li class="separated">build.pre.compile</li>
+
+			<li>build.android.startEmulator</li>
+			<li>build.android.copyResource</li>
+			<li>build.android.titaniumprep</li>
+			<li>build.android.writeAndroidManifest</li>
+			<li>build.android.aapt</li>
+			<li>build.android.javac</li>
+			<li>build.android.proguard</li>
+			<li>build.android.dexer</li>
+			<li>build.android.jarsigner</li>
+			<li>build.android.zipalign</li>
+			<li>build.ios.copyResource</li>
+			<li>build.ios.prerouting</li>
+			<li>build.ios.titaniumprep</li>
+			<li>build.ios.xcodebuild</li>
+			<li class="separated">build.ios.writeBuildManifest</li>
+
+			<li>build.post.compile</li>
+			<li>build.finalize</li>
+		</ul>
+
+		<ul class="hooks-list right next">
+			<li>create.pre</li>
+			<li>create.post</li>
+		</ul>
+
+		<ul class="hooks-list right next">
+			<li>clean.pre</li>
+			<li>clean.post</li>
+		</ul>
+
+		<ul class="hooks-list right next">
+			<li>cli:go</li>
+			<li>cli:command-loaded</li>
+			<li>cli:pre-validate</li>
+			<li>cli:post-validate</li>
+			<li>cli:pre-execute</li>
+			<li>cli:post-execute</li>
+			<li>help:header</li>
+		</ul>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>Some remarks about hooks</h2>
+		<ul>
+			<li>
+				you can call hooks manually, using <code>cli.emit</code>:
+
+				<pre><code class="language-javascript">/**
+ * @param {String|Array<String>} hookNames - The hook name or an array of many hook names
+ * @param {Object} [data] - The event payload
+ * @param {Function} callback - A callback when the event has finished firing
+ */
+function emit(hookNames, data, callback)</code></pre>
+			</li>
+			<li class="next">
+				hooks callbacks can have a priority (default 1000):
+				<pre><code class="language-javascript">cli.on('some.event', {
+    priority: 999,
+    post: function() { /* this is the callback */ }
+});</code></pre>
+				The lower the priority, the earlier the hook is executed
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>Some remarks about commands</h2>
+		<ul>
+			<li>
+				do not forget to manually call the <code>finished()</code> callback:
+
+				<pre data-line="9-11"><code class="language-javascript">exports.run = function (logger, config, cli, finished) {
+    var i = 0;
+
+    while (i < cli.argv.quantity) {
+        console.log('ponies are flying!');
+        i++;
+    }
+
+    if (typeof finished == 'function') {
+        finished()
+    }
+};</code></pre>
+			Else, the <code>cli:post-execute</code> hooks never gets called
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>package cli plugins</h2>
+		<ul>
+			<li>cli plugins are made of <em>hooks</em> and <em>commands</em>, and can be installed <em>globally</em> or <em>locally</em></li>
+			<li>global install:
+				<ul>
+					<li>
+						<img src="pictures/plugin.png" alt="" style="width: 30%; float: right" />
+						create the plugin somewhere, eg. <code>/path/to/plugin</code>
+					</li>
+					<li><code>$ ti config paths.plugins -a /path/to/plugin</code></li>
+					<li>the plugin can contain commands and/or hooks</li>
+					<li>it will work in every Titanium project</li>
+				</ul>
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>package cli plugins</h2>
+		<ul>
+			<li>local install:
+				<ul>
+					<li>
+						<img src="pictures/local-plugin.png" alt="" style="width: 30%; float: right" />
+						put the plugin in the <code>plugins</code> folder of your project
+					</li>
+					<li>
+						reference it in <code>tiapp.xml</code>:
+						<pre data-src="code/tiapp-abstract.xml"><code class="language-markup"></code></pre>
+					</li>
+					<li>may only contain hooks, not commands</li>
+					<li>usable hooks: the ones after <code>cli:post-validate</code></li>
+				</ul>
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide cover"><div>
+		<h2>Some interesting CLI plugins</h2>
+		<img src="covers/cli-plugins.jpg" alt="" />
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>ti-i18n</h2>
+		<ul style="margin-bottom: 0">
+			<li>a replacement for alloy's <code>extract-i18n</code> command</li>
+			<li>extract translation strings from your app
+				<pre><code class="language-markup">$ ti help i18n
+Usage: titanium i18n &lt;subcommand&gt;
+
+CLI to manage internationalizing your Titanium app.
+
+Titanium i18n CLI Subcommands:
+   extract   extract i18n strings from the source code (js and tss files)</code></pre>
+			</li>
+			<li>focus on your code, not on translation dictionnaries</li>
+		</ul>
+		<p class="people">thanks <a href="http://fokkezb.nl/" class="fokkezb">@fokkeZB</a></p>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>ti-installr-hook</h2>
+		<ul>
+			<li>push your dev builds to <a href="https://www.installrapp.com/">Installr</a></li>
+			<li>install it:
+				<pre><code class="language-javascript">$ npm install -g ti-installr-hook --unsafe-perm</code></pre>
+			</li>
+			<li>Set token in <code>tiapp.xml</code>:
+				<pre><code class="language-javascript">&lt;property name="installr.api_token">ENTER_INSTALLR_API_TOKEN_HERE&lt;/property>
+&lt;property name="installr.notify" type="bool">true&lt;/property></code></pre>
+			</li>
+			<li>build the app:
+				<pre><code class="language-javascript">$ ti build -p ios -T dist-adhoc --installr</code></pre>
+			</li>
+			<li>and voila!
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>ti-testflight-hook</h2>
+		<ul>
+			<li>push your dev builds to Testflight (ios only). <span class="next" style="color: red">Do not use it. Go Installr.</span></li>
+			<li>install it:
+				<pre><code class="language-javascript">$ npm install -g ti-testflight-hook --unsafe-perm</code></pre>
+			</li>
+			<li>Set token in <code>tiapp.xml</code>:
+				<pre><code class="language-javascript">&lt;property name="testflight.api_token">ENTER_API_TOKEN_HERE&lt;/property>
+&lt;property name="testflight.team_token">ENTER_TEAM_TOKEN_HERE&lt;/property></code></pre>
+			</li>
+			<li>build the app:
+				<pre><code class="language-javascript">$ ti build -p ios -T dist-adhoc --testflight</code></pre>
+			</li>
+			<li>and voila!
+			</li>
+		</ul>
+		<p class="people">thanks <a href="https://github.com/dbankier" class="dbankier">@davidbankier</a></p>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>alloy hooks into ti cli</h2>
+		<div>
+			the <code>$ alloy new</code> task installs this plugin:
+		</div>
+		<pre><code class="language-javascript">exports.installPlugin = function(alloyPath, projectPath) {
+	var id = 'ti.alloy';
+
+	// copy plugin
+	var srcFile = path.join(alloyPath,'Alloy','plugin',CONST.PLUGIN_FILE);
+	var destFile = path.join(projectPath,'plugins',id,CONST.PLUGIN_FILE);
+	exports.copyFileSync(srcFile, destFile);
+
+	// add the plugin to tiapp.xml, if necessary
+	tiapp.init(path.join(projectPath, 'tiapp.xml'));
+	tiapp.installPlugin({
+		id: 'ti.alloy',
+		version: '1.0'
+	});
+};</code></pre>
+			</li>
+		</ul>
+		<p class="people">thanks <a href="http://tonylukasavage.com/" class="tlukasavage">@tonylukasavage</a></p>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>TiNy CLI</h2>
+		<p style="margin-bottom: 20px">Some magic for lazy developers annoyed with long command lines</p>
+		<ol>
+			<li>install it:
+				<pre><code class="language-javascript">$ npm install -g tn --unsafe-perm</code></pre>
+			</li>
+			<li class="next">
+				Have fun:
+				<pre><code class="language-markup">$ titanium build --platform ios --device-family ipad</code></pre>
+				now types:
+				<pre><code class="language-markup">$ tn ipad</code></pre>
+			</li>
+		</ol>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>TiNy CLI</h2>
+		<p style="margin-bottom: 20px">Stunning features:</p>
+		<ul style="margin-bottom: 0">
+			<li>save <em>build</em> receipes:
+				<pre><code class="language-markup">$ tn save ship-my-app 172B24F5-1337-1337-1337-D08EB0A7EA5D "Check Norris (6MBV5WT2BD)"</code></pre>
+				now types:
+				<pre><code class="language-markup">$ tn ship-my-app</code></pre>
+			</li>
+			<li>lots of built-in receipes (pre-saved configurations). List:
+			<pre><code class="language-markup">$ tn list</code></pre>
+			</li>
+		</ul>
+		<p class="people">thanks <a href="http://fokkezb.nl/" class="fokkezb">@fokkeZB</a></p>
+	</div></section>
+
+	<section class="slide cover"><div>
+		<h2>Other Titanium-related CLI</h2>
+		<img src="covers/third-party-cli-tools.jpg" alt="" />
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>$ alloy</h2>
+
+		<ul style="margin-bottom: 20px">
+			<li>all alloy developers know the alloy <abbr title="Command Line Interface">CLI</abbr> tool				<ul>
+					<li><code>new</code>: turns a "classic" project into "alloy" style</li>
+					<li><code>compile</code>: runs the alloy compilation</li>
+					<li><code>generate</code>: generates code (controllers, widgets, etc.)</li>
+				</ul>
+			</li>
+		</ul>
+
+		<div class="term next" data-rows="16"></div>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>$ gittio</h2>
+		<p style="text-align: center">
+			<img src="pictures/gittio.png" alt="" style="width: 90%" />
+		</p>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>$ gittio</h2>
+		<ul>
+			<li>also available as a CLI tool!
+				<pre><code class="language-markup">$ npm install -g gittio</code></pre>
+			</li>
+			<li>
+				manage native modules and alloy widgets using gitt.io:
+				<pre><code class="language-markup">$ gittio install com.jolicode.pageflow
+$ gittio update -g
+$ gittio update -t widget</code></pre>
+			</li>
+			<li>
+				want to try a module / widget?
+				<pre><code class="language-markup">$ gittio demo dk.napp.drawer -p ios</code></pre>
+			</li>
+		</ul>
+		<p class="people">thanks <a href="http://fokkezb.nl/" class="fokkezb">@fokkeZB</a></p>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>tiapp.xml</h2>
+		<ul>
+			<li>not a CLI tool</li>
+			<li>a library for parsing and manipulating the <code>tiapp.xml</code> file
+				<pre><code class="language-markup">npm install tiapp.xml</code></pre>
+			</li>
+			<li>
+				Usage:
+				<pre><code class="language-javascript">var tiapp = require('tiapp.xml').load('./tiapp.xml');
+tiapp.id = 'com.other.name';
+// or whichever of tiapp.xml properties
+tiapp.write();</code></pre>
+			</li>
+		</ul>
+		<p class="people">thanks <a href="http://tonylukasavage.com/" class="tlukasavage">@tonylukasavage</a></p>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>$ ticons</h2>
+		<ul>
+			<li>2 versions of TiCons:
+				<ul>
+					<li><a href="http://ticons.fokkezb.nl/">http://ticons.fokkezb.nl/</a> (PHP implementation)</li>
+					<li>The CLI tool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✌</li>
+				</ul>
+				<pre><code class="language-markup">$ npm install -g ticons</code></pre>
+				Note that it has a dependacy on <code>imagemagick</code>.
+			</li>
+			<li>
+				Supports:
+				<ul>
+					<li>icons and assets</li>
+					<li>splashscreen - with 9-patch and locale support</li>
+				</ul>
+			</li>
+			<li>more up-to-date than Appcelerator's alternative <a href="https://github.com/appcelerator/spork">Spork</a> (outdated)</li>
+		</ul>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>$ ticons</h2>
+		<ul style="margin-bottom: 20px">
+			<li>icons radius for android</li>
+			<li>orientation, platform and project type detection</li>
+			<li>mutualization of ios and Android MDPI images (lighter repository)</li>
+		</ul>
+		<pre><code class="language-markup">$ ticons -h
+
+  Usage: ticons command &lt;args> [options]
+
+  Commands:
+    icons [options] [input] generate icons
+    splashes [options] [input] generate splash screens (aka launch images)
+    assets [input]         generate missing densities for input asset(s)</code></pre>
+
+		<p class="people">thanks <a href="http://fokkezb.nl/" class="fokkezb">@fokkeZB</a></p>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>$ tipi (and tetanize)</h2>
+		<ul>
+			<li><code>tetanize</code>:
+				<ul>
+					<li>a "npm package" to "titanium commonjs module" transformer
+					<pre><code class="language-markup">$ npm install -g tetanize</code></pre></li>
+					<li>Usage:
+					<pre><code class="language-markup">$ cd /path/to/underscorejs
+$ tetanize</code></pre>
+					</li>
+				</ul>
+			</li>
+			<li><code>tipi</code>:
+				<ul>
+					<li>keeps track of <code>tetanize</code>-generated modules installed
+					<pre><code class="language-markup">$ npm install -g tipi
+$ tipi install underscore</code></pre>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<p class="people">thanks <a href="https://twitter.com/_dawi_" class="dawi">@_dawi_</a></p>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>$ tishadow</h2>
+		<ul style="margin-bottom: 20px">
+			<li>no, promises, I won't say a word about TiShadow. Go use it now.</li>
+		</ul>
+
+		<p style="text-align: center">
+			<img src="pictures/tishadow.png" alt="" />
+		</p>
+
+		<p class="people">thanks <a href="https://github.com/dbankier" class="dbankier">@davidbankier</a></p>
+	</div></section>
+
+	<section class="slide tall"><div>
+		<h2>$ ti-stealth</h2>
+		<ul>
+			<li>avoid to ship applications with <code>console.log</code> statements
+				<pre><code class="language-markup">$ npm install -g ti-stealth</code></pre>
+			</li>
+			<li>remove or restore debug statements from the CLI:
+				<pre><code class="language-markup">$ ti-stealth enable [--levels &lt;levels>] [--not-levels &lt;levels>]
+$ ti-stealth restore
+</code></pre>
+				comments / uncomments <code>console.log</code> and <code>Ti.Api.info|debug|error|etc.</code> in <code>Resources</code>
+			</li>
+			<li>a sample <code>alloy.jmk</code> file shows how to automate logs removal in production</li>
+		</ul>
+
+		<p class="next last-and">and...</p>
+		<p class="next last-guess">guess what...</p>
+		<p class="next people last-people">thanks <a href="http://fokkezb.nl/" class="fokkezb">@fokkeZB</a></p>
+	</div></section>
+
+	<section class="slide cover" id="end"><div>
+		<img src="covers/99.jpg" alt="" />
+		<h2>
+			Xavier Lacot<br />
+			<a href="http://jolicode.com">http://jolicode.com</a>
+		</h2>
+		<h3 class="next">Thank you!</h3>
+		<h4 class="next">Go Oranje!</h4>
+	</div></section>
+
+	<div class="progress"><div></div></div>
+	<script src="styles/jquery-2.1.1.min.js"></script>
+	<script src="term.js"></script>
+	<script src="js/terminal.js"></script>
+	<script>
+	$(function() {
+		$('.term').terminal();
+	});
+	</script>
+	<script src="shower/shower.js"></script>
+	<script src="styles/prism.js"></script>
+	<script src="styles/progress.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+</body>
+</html>

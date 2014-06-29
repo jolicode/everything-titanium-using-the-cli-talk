@@ -1,0 +1,435 @@
+.caption {
+    color: #f7d325;
+    text-shadow: 0px 2px 2px #1b1b1b;
+}
+.cover h2 {
+    background-color: rgba(0, 0, 0, 0.5);;
+    color:#FFF;
+    padding: 10px 40px 10px 50px;
+    position: absolute;
+    text-align: right;
+    top: 120px;
+    left: 0;
+    width: 934px;
+    font-size:50px;
+}
+.cover p {
+    margin:10px 0 0;
+    text-align:center;
+    color:#FFF;
+    font-size:20px;
+}
+.cover p.date {
+    margin:10px 0 0;
+    text-align:center;
+    color:#FFF;
+    font-style:italic;
+    font-size:15px;
+}
+.cover p a {
+    color:#FFF;
+}
+
+img {
+    max-width: 100%;
+}
+
+.full .progress {
+    background-color: #fff;
+    height: 30px;
+}
+.full .progress div {
+    border: 30px solid transparent;
+    border-bottom-color:#F7D325;
+    left: -60px;
+    top: -30px;
+}
+
+.slide pre {
+    margin: 0;
+    font-family: 'PT Mono', 'Monaco';
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.slide pre code {
+    line-height: 25px;
+}
+
+.slide:after {
+    position: absolute;
+    bottom: 1px;
+    right: 50px;
+    padding: 20px 0 0;
+    width: auto;
+    height: auto;
+    background: none;
+    color: #888;
+    counter-increment: slide;
+    content: counter(slide);
+    font-size: 14px;
+    top: auto;
+    z-index: 10001;
+}
+
+.slide ol, .slide ul {
+    padding-left: 1em;
+}
+
+.slide li * {
+    text-indent: 0;
+}
+
+.slide li blockquote {
+    padding: 30px 0 30px 100px;
+    text-indent: 0;
+}
+
+.slide li blockquote p {
+    margin-bottom: 0;
+}
+
+.slide.tall > div {
+    height: 595px;
+    padding-top: 45px;
+}
+
+.slide.cover, .slide.shout{ z-index: 100002 }
+
+.list .slide>div:before, .full .slide>div:before {
+    background: url(../pictures/jolicode.svg) left 53% no-repeat;
+    bottom: 0;
+    color: #888;
+    content: 'TiConf 2014 - Monitor Your App: A Complete Panel of Titanium Monitoring Solutions';
+    font-size: 14px;
+    height: 30px;
+    left: 40px;
+    line-height: 30px;
+    padding-left: 70px;
+    position: absolute;
+    top: auto;
+    width: 100%;
+    z-index: 10000;
+}
+
+.list .slide.cover>div:before,
+.full .slide.cover>div:before,
+.list .slide.shout>div:before,
+.full .slide.shout>div:before,
+.list .slide.cover div.progressbar,
+.list .slide.shout div.progressbar {
+    display: none;
+}
+
+.slide table td, .slide table th[scope="col"] {
+    text-align: center;
+}
+
+.check {
+    height: 24px;
+    width: 24px;
+}
+
+#crittercism-pricing h2 {
+    margin-bottom: 0;
+}
+
+#crittercism-pricing table {
+    margin-bottom: 10px;
+}
+
+#crittercism-pricing th, #crittercism-pricing td {
+    font-size: 20px;
+    height: 47px;
+    vertical-align: middle;
+}
+
+#crittercism-pricing th[scope=row] {
+    width: 360px;
+}
+
+#crittercism-pricing p {
+    font-size: .8em;
+    text-align: center;
+}
+
+#during-dev blockquote {
+    margin-left: 80px;
+}
+
+#testflight img {
+    margin-left: 140px;
+    max-width: 500px;
+}
+
+#end h2 {
+    left: auto;
+    bottom: auto;
+    top: 50px;
+    right: 70px;
+
+    background-color: #f7d325;
+    border-radius: 110px;
+    color: #1b1b1b;
+    font-size: 25px;
+    height: 135px;
+    padding: 85px 0 0 0;
+    position: absolute;
+    text-align: center;
+    transform:rotate(-10deg);
+    -webkit-transform:rotate(-10deg);
+    width: 220px;
+}
+
+#end h3 {
+    left: auto;
+    bottom: auto;
+    top: 280px;
+    right: 240px;
+
+    background-color: #ff66dd;
+    border-radius: 90px;
+    color: #fff;
+    font-size: 25px;
+    height: 105px;
+    padding: 55px 0 0 0;
+    position: absolute;
+    text-align: center;
+    transform:rotate(10deg);
+    -webkit-transform:rotate(10deg);
+    width: 160px;
+}
+
+#end h4 {
+    left: auto;
+    bottom: auto;
+    top: 460px;
+    right: 120px;
+
+    background-color: #f95c29;
+    border: 3px #fff solid;
+    border-radius: 90px;
+    color: #fff;
+    font-size: 40px;
+    height: 115px;
+    line-height: 1em;
+    padding: 25px 0 0 0;
+    position: absolute;
+    text-align: center;
+    transform:rotate(-2deg);
+    -webkit-transform:rotate(-2deg);
+    width: 140px;
+}
+
+#coverpage h2 {
+    background-color: transparent;
+    margin-bottom: 0;
+    padding: 10px 0 0;
+    position: relative;
+    text-align: right;
+    top: auto;
+    font-size: 50px;
+    width: auto;
+}
+#coverpage .covertitle {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FFF;
+    padding: 8px 80px 12px 50px;
+    position: absolute;
+    text-align: right;
+    bottom: 30px;
+    left: -30px;
+    width: 970px;
+    font-size:50px;
+    transform:rotate(-3deg);
+    -webkit-transform:rotate(-3deg);
+}
+#coverpage .covertitle p {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-size: 15px;
+}
+#coverpage .covertitle p .date {
+    font-style: italic;
+}
+
+@page{margin:0;size:1024px 640px}
+
+.full .progress div{}
+.full .progress div[style$='100%;']{padding-left:10px}
+
+/* progressbar for list view */
+.list .slide div.progressbar {
+    background-color: #fff;
+    height: 30px;
+    position:absolute;
+    right:0;
+    bottom:0;
+    left:0;
+    overflow:hidden;
+    padding: 0;
+    top: auto;
+    width: 100%;
+    z-index:1
+}
+.list .slide div.progressbar div {
+    border: 30px solid transparent;
+    border-bottom-color: #F7D325;
+    left: -60px;
+    top: -30px;
+
+    position:absolute;
+    width:0;
+}
+
+.full .slide div.progressbar {
+    display: none;
+}
+
+/* vertical align the shouts (better than transform for printing) */
+.slide.shout div {
+    display: table;
+    height: 640px;
+    padding: 0 120px;
+}
+
+.slide.shout h2 {
+    line-height: 150px !important;
+    margin: -25% 0 0 0;
+    -webkit-transform: none;
+    transform: none;
+    display: table-cell;
+    height: auto;
+    position: relative;
+    top: auto;
+    vertical-align: middle;
+}
+
+.term {
+    margin: 0 -30px;
+}
+
+.terminal {
+    float: left;
+    border: #000 solid 5px;
+    font-family: "DejaVu Sans Mono", "Liberation Mono", monospace;
+    font-size: 14px;
+    color: #f0f0f0;
+    line-height: 110%;
+    background: #000;
+}
+
+.terminal-cursor {
+    color: #000;
+    background: #f0f0f0;
+}
+
+a[data-role="term-command"] {
+    background: none;
+    background-color: #ddffdd;
+    border: 2px #009800 solid;
+    color: #009800;
+    float: right;
+    line-height: 100%;
+    margin-right: -47px;
+    margin-top: 5px;
+    padding: 2px 5px;
+}
+
+.hooks-list {
+    font-size: 70%;
+    line-height: 125%;
+    width: 44%;
+}
+
+.hooks-list .separated {
+    margin-bottom: 10px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.half {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+}
+
+.center {
+    text-align: center;
+}
+.full {
+    cursor: url(../pictures/cursor.png),auto;
+}
+
+.people {
+    position: absolute;
+    bottom: -15px;
+    right: 115px;
+}
+
+.people.with {
+    position: absolute;
+    bottom: 84px;
+    right: 220px;
+}
+
+.people a {
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    border-radius: 40px;
+    text-indent: -10000px !important;
+    border: 1px #444 solid;
+    vertical-align: middle;
+}
+
+.dawi {
+    background: transparent url(../pictures/dawi.jpg) top left no-repeat;
+}
+
+.dbankier {
+    background: transparent url(../pictures/dbankier.jpg) top left no-repeat;
+}
+
+.fokkezb {
+    background: transparent url(../pictures/fokkezb.jpg) top left no-repeat;
+}
+
+.thebrousse {
+    background: transparent url(../pictures/thebrousse.jpg) top left no-repeat;
+}
+
+.tlukasavage {
+    background: transparent url(../pictures/tlukasavage.png) top left no-repeat;
+}
+
+.last-guess {
+    color: red;
+    position: absolute;
+    bottom: 0px;
+    right: 272px;
+}
+
+.last-and {
+    color: red;
+    position: absolute;
+    bottom: 0px;
+    right: 420px;
+}
+
+.last-people {
+    color: red;
+}
+
+.last-people a {
+    border: 1px red solid;
+}
+
