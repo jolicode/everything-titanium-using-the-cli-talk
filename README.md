@@ -18,7 +18,7 @@ Do not run it on a public server. Do not type crap in the in-slides embedded ter
 
 Generating a PDF can be achieved using Google Chrome (Print / Destination = "Save as PDF"). The generated PDF must be shrinked if too large - use [OSX Quartz filters for downsampling the embedded images](http://meyerweb.com/eric/thoughts/2010/02/25/better-pdf-file-size-reduction-in-os-x/).
 
-A sample generated document is [available at Speakerdeck](https://speakerdeck.com/xavierlacot/monitor-your-app-a-complete-panel-of-titanium-monitoring-solutions).
+A sample generated document is [available at Speakerdeck](https://speakerdeck.com/xavierlacot/everything-titanium-using-the-cli).
 
 ## Credits and acknowledgements
 
